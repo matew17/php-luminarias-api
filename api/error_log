@@ -1,0 +1,85 @@
+[30-Oct-2015 23:11:34 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'marba917_aycapp'@'localhost' (using password: YES)' in /home4/marba917/public_html/AyC/WS/index.php:7
+Stack trace:
+#0 /home4/marba917/public_html/AyC/WS/index.php(7): PDO->__construct('mysql:dbname=ma...', 'marba917_aycapp', 'huevo0cd')
+#1 {main}
+  thrown in /home4/marba917/public_html/AyC/WS/index.php on line 7
+[30-Oct-2015 23:14:22 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000] [1044] Access denied for user 'marba917_aycws'@'localhost' to database 'marba917_ayc'' in /home4/marba917/public_html/AyC/WS/index.php:7
+Stack trace:
+#0 /home4/marba917/public_html/AyC/WS/index.php(7): PDO->__construct('mysql:dbname=ma...', 'marba917_aycws', 'wsarquitectura1...')
+#1 {main}
+  thrown in /home4/marba917/public_html/AyC/WS/index.php on line 7
+[23-Aug-2016 23:56:59 America/Chicago] PHP Fatal error:  Call to a member function emisoras() on null in /home4/leogroup/public_html/Api/index.php on line 121
+[21-Sep-2016 01:27:02 America/Chicago] PHP Fatal error:  Call to a member function update() on null in /home4/leogroup/public_html/Api/index.php on line 125
+[21-Sep-2016 01:30:55 America/Chicago] PHP Fatal error:  Call to a member function update() on null in /home4/leogroup/public_html/Api/index.php on line 125
+[21-Sep-2016 01:31:34 America/Chicago] PHP Fatal error:  Call to a member function update() on null in /home4/leogroup/public_html/Api/index.php on line 125
+[21-Sep-2016 01:35:06 America/Chicago] PHP Fatal error:  Call to a member function update() on null in /home4/leogroup/public_html/Api/index.php on line 125
+[03-Nov-2016 13:01:30 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[03-Nov-2016 13:01:35 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[03-Nov-2016 13:01:56 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[03-Nov-2016 13:02:07 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[03-Nov-2016 13:02:35 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[03-Nov-2016 14:30:23 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[03-Nov-2016 14:30:41 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[15-Nov-2016 01:10:19 America/Chicago] PHP Fatal error:  Call to a member function update() on null in /home4/leogroup/public_html/Api/index.php on line 127
+[15-Nov-2016 01:10:42 America/Chicago] PHP Fatal error:  Call to a member function update() on null in /home4/leogroup/public_html/Api/index.php on line 127
+[01-Dec-2016 16:36:25 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'eapsa_app'@'localhost' (using password: YES)' in /home4/eapsa/public_html/App/api/index.php:7
+Stack trace:
+#0 /home4/eapsa/public_html/App/api/index.php(7): PDO->__construct('mysql:dbname=ea...', 'eapsa_app', 'Terminaitor31**', Array)
+#1 {main}
+  thrown in /home4/eapsa/public_html/App/api/index.php on line 7
+[04-Dec-2016 23:27:44 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[04-Dec-2016 23:53:33 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[04-Dec-2016 23:54:29 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[04-Dec-2016 23:56:14 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[05-Dec-2016 00:11:18 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[05-Dec-2016 00:12:16 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[05-Dec-2016 00:16:28 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[05-Dec-2016 00:18:24 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[05-Dec-2016 00:19:25 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[06-Dec-2016 11:25:56 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[06-Dec-2016 11:27:53 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[06-Dec-2016 11:27:55 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[06-Dec-2016 11:27:58 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[06-Dec-2016 11:28:50 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[06-Dec-2016 11:29:16 America/Chicago] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[28-Dec-2016 22:58:01 America/Bogota] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[08004] [1040] Too many connections' in /home4/eapsa/public_html/App/api/index.php:7
+Stack trace:
+#0 /home4/eapsa/public_html/App/api/index.php(7): PDO->__construct('mysql:dbname=ea...', 'eapsa_app', 'Terminaitor31*', Array)
+#1 {main}
+  thrown in /home4/eapsa/public_html/App/api/index.php on line 7
+[28-Dec-2016 23:03:25 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-Dec-2016 23:10:52 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-Dec-2016 23:25:03 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-Dec-2016 23:25:28 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-Dec-2016 23:26:10 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-Dec-2016 23:26:19 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[03-Jan-2017 15:03:01 America/Bogota] PHP Fatal error:  Call to a member function update() on boolean in /home4/eapsa/public_html/App/api/index.php on line 114
+[03-Jan-2017 15:14:58 America/Bogota] PHP Fatal error:  Call to a member function update() on boolean in /home4/eapsa/public_html/App/api/index.php on line 114
+[03-Jan-2017 15:17:52 America/Bogota] PHP Fatal error:  Call to a member function update() on boolean in /home4/eapsa/public_html/App/api/index.php on line 114
+[03-Jan-2017 15:20:05 America/Bogota] PHP Fatal error:  Call to a member function update() on boolean in /home4/eapsa/public_html/App/api/index.php on line 114
+[03-Jan-2017 15:23:29 America/Bogota] PHP Fatal error:  Call to a member function update() on boolean in /home4/eapsa/public_html/App/api/index.php on line 110
+[04-Jan-2017 19:11:33 America/Bogota] PHP Fatal error:  Call to a member function update() on boolean in /home4/eapsa/public_html/App/api/index.php on line 381
+[10-Jan-2017 18:14:31 America/Bogota] PHP Fatal error:  Call to a member function update() on boolean in /home4/eapsa/public_html/App/api/index.php on line 114
+[11-Jan-2017 11:05:50 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:05:51 America/Bogota] PHP Fatal error:  Call to a member function delete() on null in /home4/eapsa/public_html/App/api/index.php on line 319
+[11-Jan-2017 11:09:55 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:12:47 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:12:47 America/Bogota] PHP Fatal error:  Call to a member function delete() on null in /home4/eapsa/public_html/App/api/index.php on line 319
+[11-Jan-2017 11:12:59 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:12:59 America/Bogota] PHP Fatal error:  Call to a member function delete() on null in /home4/eapsa/public_html/App/api/index.php on line 319
+[11-Jan-2017 11:13:08 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:17:00 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:17:00 America/Bogota] PHP Fatal error:  Call to a member function delete() on null in /home4/eapsa/public_html/App/api/index.php on line 319
+[11-Jan-2017 11:19:11 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:19:11 America/Bogota] PHP Fatal error:  Call to a member function delete() on null in /home4/eapsa/public_html/App/api/index.php on line 319
+[11-Jan-2017 11:24:08 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:24:08 America/Bogota] PHP Fatal error:  Call to a member function delete() on null in /home4/eapsa/public_html/App/api/index.php on line 319
+[11-Jan-2017 11:24:40 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:24:40 America/Bogota] PHP Fatal error:  Call to a member function delete() on null in /home4/eapsa/public_html/App/api/index.php on line 319
+[11-Jan-2017 11:31:22 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:37:25 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:38:03 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:38:33 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2017 11:38:33 America/Bogota] PHP Fatal error:  Call to a member function delete() on null in /home4/eapsa/public_html/App/api/index.php on line 319
+[11-Jan-2017 11:39:03 America/Bogota] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan

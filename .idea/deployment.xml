@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Eapsa">
+    <serverData>
+      <paths name="Básculas Jaramillo">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Eapsa">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/app" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/app/backend" />
+            <excludedPath path="/app/api/__MACOSX" />
+            <excludedPath local="true" path="$PROJECT_DIR$/backend" />
+            <excludedPath local="true" path="$PROJECT_DIR$/api/__MACOSX" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="Taktil">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
