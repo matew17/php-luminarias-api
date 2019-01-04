@@ -12,5 +12,8 @@
 	],
 	"autoload": {
 		"files": ["NotORM.php"]
-	}
+	},
+  "require": {
+    "ext-json": "*"
+  }
 }
