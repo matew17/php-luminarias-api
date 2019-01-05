@@ -25,6 +25,7 @@ $app->get("/", function ()
 
 // USUARIOS
 //--------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------
 
 //Retorna el Usuario o FAIL y recibe usuario y contraseña
 $app->post("/usuarios/login/", function () use ($app, $db)
@@ -79,7 +80,6 @@ $app->post("/usuarios/notificaciones/", function () use($app, $db)
 
 // MAPA (GEREFERENCIACIÓN)
 //--------------------------------------------------------------------------------------------------------------------
-
 //--------------------------------------------------------------------------------------------------------------------
 
 //Retorna todas las Luminarias
@@ -293,7 +293,108 @@ $app->post("/luminarias/eliminar/:id", function ($id) use($app, $db)
 
 // GESTIÓN OPERATIVA
 //--------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------
 
+//Retorna todas los Mantenimientos Preventivos pendientes
+$app->get("/operativo/mantenimientos/preventivos", function () use ($app, $db) {
+	$app->response()->header("Content-Type", "application/json");
+
+	$respuesta = array();
+
+	foreach ($db->tbdetrutasprevmto()->order("id DESC") as $mtoPrev) {
+		if(strtoupper($mtoPrev['estado']) == 'P'){
+			$mtoPrev['numero_luminaria'] = getNumeroLuminaria($mtoPrev['idLuminaria'], $db);
+			$mtoPrev['nombre_ubicacion'] = getBarrio($mtoPrev['idUbicacion'], $db);
+			$respuesta[] = $mtoPrev;
+		}
+	}
+
+	$array = array("results" => $respuesta);
+	echo json_encode($array);
+});
+
+//--------------------------------------------------------------------------------------------------------------------
+
+//Crea un nuevo Mantenimiento Preventivo para una Ubicación
+// TODO
+$app->post("/operativo/mantenimientos/crear", function () use ($app, $db) {
+	$app->response()->header("Content-Type", "application/json");
+
+	$post = $app->request()->post();
+
+	$fecha = date("Y-m-d H:i:s");
+	$post['fechaHora'] = $fecha;
+
+	$result = $db->tbpqr->insert($post);
+	if ($result) {
+		$temp = $db->tbpqr("fechaHora = ?", $post['fechaHora'])->fetch();
+		$respuesta = "OK";
+	} else {
+		$respuesta = "FAIL";
+	}
+
+	$array = array("respuesta" => $respuesta, "pqr" => $temp);
+	echo json_encode($array);
+});
+
+//--------------------------------------------------------------------------------------------------------------------
+
+//Edita un Mantenimiento Preventivo, retorna OK o FAIL
+$app->post("/operativo/mantenimientos/preventivo/responder/:id", function ($id) use($app, $db)
+{
+	$app->response()->header("Content-Type", "application/json");
+	$post = $app->request()->post();
+
+	$fecha = date("Y-m-d H:i:s");
+	$post['fechaRealizada'] = $fecha;
+	$post['estado'] = "R";
+
+	$pqr = $db->tbdetrutasprevmto[$id];
+	$result = $pqr->update($post);
+
+	if($result) {
+		$temp = $db->tbdetrutasprevmto("fechaRealizada = ?", $post['fechaRealizada'])->fetch();
+		$respuesta = 'OK';
+	} else {
+		$respuesta = 'FAIL';
+	}
+
+	$array = array("respuesta" => $respuesta, "preventivo" => $temp);
+	echo json_encode($array);
+});
+
+//--------------------------------------------------------------------------------------------------------------------
+
+//Elimina un Mantenimiento Preventivo, retorna OK o FAIL
+$app->post("/operativo/mantenimientos/preventivo/eliminar/:id", function ($id) use($app, $db)
+{
+	$app->response()->header("Content-Type", "application/json");
+	$post = $app->request()->put();
+
+	$post['estado'] = "D";
+
+	$mtoPreventivo = $db->tbdetrutasprevmto[$id];
+	if($mtoPreventivo['estado'] == $post['estado']) {
+		$respuesta = 'OK';
+	} else {
+		$result = $mtoPreventivo->update($post);
+
+		if($result)
+		{
+			$respuesta = 'OK';
+		}
+		else
+		{
+			$respuesta = 'FAIL';
+		}
+	}
+
+	$array = array("respuesta" => $respuesta);
+	echo json_encode($array);
+});
+
+// PQR'S
+//--------------------------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------------------------
 
 //Retorna todas las PQR pendientes
@@ -427,7 +528,6 @@ $app->post("/operativo/pqr/eliminar/:id", function ($id) use($app, $db)
 
 // GESTIÓN DOCUMENTAL
 //--------------------------------------------------------------------------------------------------------------------
-
 //--------------------------------------------------------------------------------------------------------------------
 
 //Retorna todas los Documentos
@@ -599,7 +699,7 @@ $app->post("/documental/documentos/eliminar/:id", function ($id) use($app, $db)
 
 //----------------------------------------------------------------------------------------------------------------
 
-//--------------------------------------------------------------------------------------------------------------------
+// FUNCTIONS
 //--------------------------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------------------------
 
@@ -666,5 +766,26 @@ function getTipoLampara($idTipoLampara, $db)
 
 //--------------------------------------------------------------------------------------------------------------------
 
+function getNumeroNuevoLuminaria($idLuminaria, $db)
+{
+	$numeroLuminaria = $db->tbluminarias[$idLuminaria];
+
+	$numeroLuminaria = $numeroLuminaria['idPosteNuevo'];
+
+	return $numeroLuminaria;
+}
+
+//--------------------------------------------------------------------------------------------------------------------
+
+function getNumeroLuminaria($idLuminaria, $db)
+{
+	$numeroLuminaria = $db->tbluminarias[$idLuminaria];
+
+	$numeroLuminaria = $numeroLuminaria['idPoste'];
+
+	return $numeroLuminaria;
+}
+
+//--------------------------------------------------------------------------------------------------------------------
 
 $app->run();
